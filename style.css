@@ -1,0 +1,166 @@
+/* Media queries */
+
+@media only screen and (min-width: 768px){
+    body{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 10vh 85vh 5vh;
+        grid-template-areas: "nav nav nav" 
+        "main main aside" 
+        "footer footer footer";
+    }
+
+        nav{
+        background-color: skyblue;
+    }
+}
+
+
+/* Body */
+
+*{
+    padding: 0;
+    margin: 0;
+    font-size: 5px;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+nav, main, aside, footer{
+    padding: 10px;
+    color: white;
+    font-weight: 800;
+}
+
+nav{
+    background-color: #1c1c1c;
+    grid-area: nav;
+}
+
+main{
+    background-color: #ecebe4;
+    grid-area: main;
+}    
+
+aside{
+    background-color: #ecebe4;
+    grid-area: aside;
+}
+
+footer{
+    background-color: #000000;
+    grid-area: footer;
+
+}    
+
+body{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10vh 60vh 25vh 5vh;
+    grid-template-areas: "nav" "main" "aside" "footer";
+}    
+
+html{
+    font-size: 62.5%;
+}
+
+.grid{
+	width:99%;
+	display: grid;
+}
+
+.grid-template-columns-row{
+a	grid-template-columns:repeat(2, 1fr);
+	grid-template-rows: 80px 500px 50px;
+	grid-gap: 30px 10px;
+}
+
+.template-areas{
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 80px 600px 50px;
+	grid-template-areas: "nav nav nav" "main main aside" "footer footer footer";
+	grid-column-gap: 10px;
+	}
+.justify-content{
+	display: grid;
+	grid-template-columns:repeat(3, 300px);
+	height: 500px;
+	justify-content: space-around;
+}
+
+ul {
+	list-style: none;
+  		background-color: #1c1c1c;
+      font-size: 0; 
+      padding: 1px;
+}
+
+li{
+	 display: inline-block;
+      width: 15%;
+      position:relative;
+      font-size: 1rem
+}
+
+ul ul{
+	position: absolute;
+         display: none;
+      }
+}
+
+ul ul ul {
+	display: block;
+}
+
+
+      ul li:hover ul {
+            display:block;
+         }
+
+   a{
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+   }
+
+   a:hover{
+      color: black;
+   }
+
+img{
+	display: block;
+	margin: 0 auto;
+}
+
+div {
+  width: 100%;
+  height: 300px;
+  background-size: 100% 100%;
+  border: 1px solid red;
+}
+
+
+
+/* Start: Video Responsive */
+.video-responsive {
+    overflow:hidden;
+    padding-bottom:400px; /* Adecua este valor para controlar la altura del video */
+    position:relative;
+    height:0;
+}
+.video-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+/* End: Video Responsive */
+
+.my-element {
+  display: inline-block;
+  margin: 0 0.5rem;
+
+  animation: bounce; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+}
